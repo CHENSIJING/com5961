@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+   <meta charset="UTF-8">
+   <link type="text/css" rel="stylesheet" href="style.css" media="all"/>
+   <style>
+   .defaultStyle{
+    font:normal 12pt arial;
+    text-decoration: none;
+    background-color:#bbbbbb !important;
+   }
+
+   .newStyle{
+    font:italic 12pt arial;
+    text-decoration:underline;
+    background-color:#e4d432 !important;
+   }
+
+   .myStyle{
+    border:solid;
+    font-family:arial;
+    left:200px;
+    top:200px;
+   }
+   </style>
+  
+   <script type="text/javascript">
+        function sidebar2_onMouseOver(){
+          var sidebar2=document.getElementById("sidebar2");
+          sidebar2.className="newStyle"
+          sidebar2.innerHTML="<h2>Be kind to your teacher</h2><p>Always aim for the best!</p>";
+        }
+        function sidebar2_onMouseOut(){
+           var sidebar2=document.getElementById("sidebar2");
+          sidebar2.className="defaultStyle"
+          sidebar2.innerHTML="<h2>Be yourself</h2><p>See what can be show here.</p>";
+        }
+        
+     </script>   
+   <title>
+   homework
+   </title>
+
+  </head>
+
+  <body>
+    <header class="banner">
+    <h1>News</h1>
+    <p> Local and National News</p>
+    </header>
+
+        <div class="nav_tag">
+             <ul id="navlist">
+             <li><a class="highlighted" href="home.html"onmouseover="sidebar2_onMouseOver()" onmouseout="sidebar2_onMouseOut()">Home 
+             </a></li>
+             <li><a class="highlighted" href="archive.html"onmouseover="sidebar2_onMouseOver()" onmouseout="sidebar2_onMouseOut()">Archives</a></li>
+             <li> <a class="highlighted" href="about.html"onmouseover="sidebar2_onMouseOver()" onmouseout="sidebar2_onMouseOut()">About</a></li>
+              
+             </ul>
+
+        </div>
+ 
+    <main>
+        <div class="section_tag">
+	            <h2 id="local">Local news</h2>
+             
+
+	        <div class="article_tag">
+		          <header>
+		          <h3>Fire fighters rescue man from building</h3>
+		           	<p>(author,date)</p>
+		          </header>
+		           	<p> This is the story text. This is the story text.
+                <br> This is the story text. This is the story text.</p>
+	        </div>
+
+	        <div class="article_tag">
+		          <header>
+		         	<h3>New library to be built</h3>
+		         	<p>(author,date)</p>
+		         	</header>
+		           	<p> This is the story text. This is the story text.
+                <br>This is the story text. This is the story text.</p>
+	        </div>
+
+        </div>
+
+        <div class="section_tag">
+              <h2>National news</h2>
+
+          <div class="article_tag">
+               <header>
+               <h3> Snow storm is making travel difficult</h3>
+               <p>(author,date)</p>
+               </header>
+               <p> This is the story text.This is the story text.
+               <br>This is the story text.THis is the story text.</p>
+          </div>
+
+          <div class="article_tag">
+               <header>
+           	   <h3>Thousands are without power</h3>
+           	   <p>(author,date)</p>
+           	   </header>
+           	   <p> This is the story text.This is the story text.
+               <br>This is the story text.This is the story text.</p>
+          </div>
+
+        </div>
+
+    </main>
+
+    <aside>
+           <h2>Be a news reporter </h2>
+           <p> If you see news happening-Send us a text </p>
+
+    </aside>
+    <aside id="sidebar2">
+            <h2> Be yourself</h2>
+           <p>See what can be shown here</p>
+    </aside>
+
+    <footer>
+    <p> Footer information</p>
+    </footer>
+    
+
+  </body>
+</html>
