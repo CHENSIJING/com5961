@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+   <meta charset="UTF-8">
+   <link type="text/css" rel="stylesheet" href="newsstyle.css" media="all"/>
+   
+   <script type="text/javascript">
+        function sidebar2_onMouseOver(){
+          var sidebar2=document.getElementById("sidebar2");
+          sidebar2.className="newStyle"
+          sidebar2.innerHTML="<h2>Be kind to your teacher</h2><p>Always aim for the best!</p>";
+        }
+        function sidebar2_onMouseOut(){
+           var sidebar2=document.getElementById("sidebar2");
+          sidebar2.className="defaultStyle"
+          sidebar2.innerHTML="<h2>Be yourself</h2><p>See what can be show here.</p>";
+        }
+
+       function sidebar3_onMouseOver(){
+       	   var sidebar3=document.getElementById("sidebar3");
+       	   sidebar3.className="bigStyle";
+       }
+       function sidebar3_onMouseOut(){
+       	   var sidebar3=document.getElementById("sidebar3");
+       	   sidebar3.className="defaultStyle";
+       }
+ 
+       function myFunction1(){
+           		alert("We have received your comment");
+           	}
+       function validateForm(){
+              var x=document.forms["myForm"]["fname"].value;
+              var sidebar2=document.getElementById("sidebar2")
+              sidebar2.innerHTML="<p>Your comment has been received as:</p>"+x;}
+
+    </script>
+   
+   <style>
+   .defaultStyle{
+    font:normal 12pt arial;
+    text-decoration: none;
+    background-color:#bbbbbb !important;
+   }
+
+   .newStyle{
+    font:italic 12pt arial;
+    text-decoration:underline;
+    background-color:#e4d432 !important;
+   }
+
+   .myStyle{
+    border:solid;
+    font-family:arial;
+    left:200px;
+    top:200px;
+   }
+   .bigStyle{
+   	font:italic 24pt arial;
+   	text-decoration:none;
+   	background-color:#e4d432 !important;
+   }
+
+   </style>
+  
+   
+   <title>
+   news
+   </title>
+
+  </head>
+
+  <body>
+    <header class="banner">
+    <h1>News Today</h1>
+    <p> Local and National News</p>
+    </header>
+
+        <div class="nav_tag">
+             <ul id="navlist">
+             <li><a class="highlighted" href="home.html"onmouseover="sidebar2_onMouseOver()" onmouseout="sidebar2_onMouseOut()">Home 
+             </a></li>
+             <li><a class="highlighted" href="archive.html"onmouseover="sidebar2_onMouseOver()" onmouseout="sidebar2_onMouseOut()">Archives</a></li>
+             <li> <a class="highlighted" href="about.html"onmouseover="sidebar2_onMouseOver()" onmouseout="sidebar2_onMouseOut()">About</a></li>
+              
+             </ul>
+
+        </div>
+ 
+    <main>
+        <div class="section_tag">
+	            <h2 id="local">Local news</h2>
+             
+
+	        <div class="article_tag">
+		          <header>
+		          <h3>Fire fighters rescue man from building</h3>
+		           	<p>(author,date)</p>
+		          </header>
+		           	<p> This is the story text. This is the story text.
+                <br> This is the story text. This is the story text.</p>
+	        </div>
+
+	        <div class="article_tag">
+		          <header>
+		         	<h3>New library to be built</h3>
+		         	<p>(author,date)</p>
+		         	</header>
+		           	<p> This is the story text. This is the story text.
+                <br>This is the story text. This is the story text.</p>
+	        </div>
+
+        </div>
+
+        <div class="section_tag">
+              <h2>National news</h2>
+
+          <div class="article_tag">
+               <header>
+               <h3> Snow storm is making travel difficult</h3>
+               <p>(author,date)</p>
+               </header>
+               <p> This is the story text.This is the story text.
+               <br>This is the story text.THis is the story text.</p>
+          </div>
+
+          <div class="article_tag">
+               <header>
+           	   <h3>Thousands are without power</h3>
+           	   <p>(author,date)</p>
+           	   </header>
+           	   <p> This is the story text.This is the story text.
+               <br>This is the story text.This is the story text.</p>
+          </div>
+
+        </div>
+
+    </main>
+
+    <aside>
+           <h2>Leave us your comment </h2>
+           <form name=myForm action="/action_page_post.php"
+           onsubmit="return validateForm()" method="post">
+           <p>Enter:</p> <input type="text" name="fname">
+           <a href="javascript:validateForm()">Submit</a>
+           </form>
+           
+    </aside>
+
+    <aside id="sidebar2">
+            <h2> Be yourself</h2>
+           <p>See what can be shown here</p>
+    </aside>
+
+    <aside id="sidebar3">
+           <h2 onmouseover="sidebar3_onMouseOver()" onmouseout="sidebar3_onMouseOut()"> Become a member of our website!</h2>
+    </aside>
+    
+
+    <footer>
+            
+              <h2> click here for our contact information</h2>
+              <button onclick="myFunction()">Contact us！</button>
+              <p id="information"></p>
+              <script>function myFunction(){
+              	document.getElementById("information").innerHTML="Tel:+852 69964084 Email:summerchen0822@126.com";}
+              	</script>
+    </footer>
+    
+  </body>
+</html>
